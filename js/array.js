@@ -63,9 +63,16 @@ boton.addEventListener("click", () => {
 
 const botonSimular = document.getElementById("botonSimular");
 botonSimular.addEventListener("click", () => {
-    console.log("ClickB");
-    // localStorage.setItem("datosDelCliente", JSON.stringify(Prestamo));
-    //     console.info("Se almaceno correctamente");
+
+
+    
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Sus datos se estan procesando',
+        showConfirmButton: false,
+        timer: 1500
+      })
     
    
     const prestamo1 = new SimuladorPrestamo(sueldo, sueldoDebitar, cuotas);
@@ -98,7 +105,7 @@ botonSimular.addEventListener("click", () => {
 
     TotalPrestamo.innerHTML = '<h3>Monto total del prestamo permitido: $' + prestamoNeto + '</h3>';
     const buttonDetalle = document.querySelector("#buttonDetalle")
-    buttonDetalle.innerHTML=  '<button id="botonDetalle"><a href="./assets/pages/Detalles.html">Detalle</a></button>';
+    buttonDetalle.innerHTML=  '<button id="botonDetalle"><a href="./assets/pages/detalles.html">Detalle</a></button>';
      ImporteCuotas= prestamos[0].totalAPagar/cuotas;
       console.log(ImporteCuotas)
     // guardoDatos();
