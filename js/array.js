@@ -65,7 +65,7 @@ const botonSimular = document.getElementById("botonSimular");
 botonSimular.addEventListener("click", () => {
 
 
-    //agregue este aviso en el caso que demore en procesar los datos
+    
     Swal.fire({
         position: 'center',
         icon: 'success',
